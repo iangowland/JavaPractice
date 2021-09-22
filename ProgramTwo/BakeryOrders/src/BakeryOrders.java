@@ -1,6 +1,6 @@
 /**
  * 
- * Made by Ian Gowland
+ * Created by Ian Gowland
  * 
  * Date: 9/18/21
  * 
@@ -17,14 +17,13 @@ import java.text.DecimalFormat;
 
 /**
  * 
- * @author Ian Gowland
- * 
  * This is a program that calculates the cost of an order at a bakery. 
  * The number of cupcakes ordered will determine the discount.
- * The program will ask the user for their name, when they want to pick up 
- * the order, and the number of each cupcake they want. Then a receipt
+ * The program will ask the user for information, and a receipt
  * will be printed that formats the entered information and all of the
  * included costs.
+ * 
+ * @author Ian Gowland
  * 
  */
 
@@ -82,7 +81,7 @@ public class BakeryOrders
         // Welcome message
 
         System.out.println("\nWelcome to Pflugerville Bakery!" + 
-        "\nWe're ready to take your order.\n");
+        "\nWe're ready to take your cupcake order.\n");
 
         System.out.print("Please enter your name: ");
 
@@ -185,26 +184,26 @@ public class BakeryOrders
 
         // Subtotal
 
-        System.out.println("Subtotal: " + dollars.format(subtotal));
+        System.out.println("Subtotal: \t\t" + dollars.format(subtotal));
 
 
         // Print discount information if order is over 12 cupcakes
         
         if (totalCakes >= 12)
         {
-            System.out.println("Discount percentage: " + percent.format(discountMult));
-            System.out.println("Discount amount: " + dollars.format(discountAmount));
-            System.out.println("Discounted subtotal: " + dollars.format(discountedSubtotal));
+            System.out.println("Discount percentage: \t   " + percent.format(discount));
+            System.out.println("Discount amount: \t" + dollars.format(discountAmount));
+            System.out.println("Discounted subtotal: \t" + dollars.format(discountedSubtotal));
         }
 
 
         // Print the rest of the transaction information regardless of # of cupcakes
 
-        System.out.println("Tax: " + dollars.format(tax));
-        System.out.println("\nTotal cost: " + dollars.format(totalCost) + "\n");
+        System.out.println("Tax: \t\t\t" + dollars.format(tax));
+        System.out.println("\nTotal cost: \t\t" + dollars.format(totalCost) + "\n");
 
 
         System.out.println("This order will be available for pickup " +
-        "\nBy: " + name + "\nOn: " + pickupDay + "\n");
+        "\nBy: " + name + "\nOn: " + pickupDay);
     }
 }
