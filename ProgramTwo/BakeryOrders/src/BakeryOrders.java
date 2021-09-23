@@ -19,7 +19,7 @@ import java.text.DecimalFormat;
  * 
  * This is a program that calculates the cost of an order at a bakery. 
  * The number of cupcakes ordered will determine the discount.
- * The program will ask the user for information, and a receipt
+ * The program will ask the user for information and a receipt
  * will be printed that formats the entered information and all of the
  * included costs.
  * 
@@ -205,5 +205,7 @@ public class BakeryOrders
 
         System.out.println("This order will be available for pickup " +
         "\nBy: " + name + "\nOn: " + pickupDay);
+
+        input.close();
     }
 }
