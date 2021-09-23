@@ -9,7 +9,6 @@
  * Programming Assignment #1 
  * Distance.java
  * 
- * Hi From Shawn
  */
 
 import java.util.Scanner;
