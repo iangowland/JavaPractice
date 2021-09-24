@@ -50,17 +50,17 @@ public class BakeryOrders
 
         // Constants
 
-        double RED_VELV_PRICE = 2.00;
+        final double RED_VELV_PRICE = 2.00;
 
-        double CARAM_PRICE = 2.50;
+        final double CARAM_PRICE = 2.50;
 
-        double CHOC_PRICE = 3.00;
+        final double CHOC_PRICE = 3.00;
 
-        double DOZEN_DISCOUNT = 0.1;
+        final double DOZEN_DISCOUNT = 0.1;
 
-        double THREE_DOZEN_DISCOUNT = 0.15;
+        final double THREE_DOZEN_DISCOUNT = 0.15;
 
-        double SALES_TAX = 0.0725;
+        final double SALES_TAX = 0.0725;
 
 
         // Receipt variables 
@@ -110,6 +110,40 @@ public class BakeryOrders
         System.out.print("Enter the day of the week you will pick up your order: ");
 
         String pickupDay = input.next();
+
+        if (pickupDay.equalsIgnoreCase("Monday"))
+        {
+            pickupDay = "Monday";
+        }
+        else if(pickupDay.equalsIgnoreCase("Tuesday"))
+        {
+            pickupDay = "Tuesday";
+        }
+        else if(pickupDay.equalsIgnoreCase("Wednesday"))
+        {
+            pickupDay = "Wednesday";
+        }
+        else if(pickupDay.equalsIgnoreCase("Thursday"))
+        {
+            pickupDay = "Thursday";
+        }
+        else if(pickupDay.equalsIgnoreCase("Friday"))
+        {
+            pickupDay = "Friday";
+        }
+        else if(pickupDay.equalsIgnoreCase("Saturday"))
+        {
+            pickupDay = "Saturday";
+        }
+        else if(pickupDay.equalsIgnoreCase("Sunday"))
+        {
+            pickupDay = "Sunday";
+        }
+        else 
+        {
+            System.out.print("This is not a day of the week. Please re-enter the day: ");
+        }
+
 
         System.out.println();
 
@@ -184,23 +218,23 @@ public class BakeryOrders
 
         // Subtotal
 
-        System.out.println("Subtotal: \t\t" + dollars.format(subtotal));
+        System.out.println("Subtotal: " + dollars.format(subtotal));
 
 
         // Print discount information if order is over 12 cupcakes
         
         if (totalCakes >= 12)
         {
-            System.out.println("Discount percentage: \t   " + percent.format(discount));
-            System.out.println("Discount amount: \t" + dollars.format(discountAmount));
-            System.out.println("Discounted subtotal: \t" + dollars.format(discountedSubtotal));
+            System.out.println("Discount percentage: " + percent.format(discount));
+            System.out.println("Discount amount: " + dollars.format(discountAmount));
+            System.out.println("Discounted subtotal: " + dollars.format(discountedSubtotal));
         }
 
 
         // Print the rest of the transaction information regardless of # of cupcakes
 
-        System.out.println("Tax: \t\t\t" + dollars.format(tax));
-        System.out.println("\nTotal cost: \t\t" + dollars.format(totalCost) + "\n");
+        System.out.println("Tax: " + dollars.format(tax));
+        System.out.println("\nTotal cost: " + dollars.format(totalCost) + "\n");
 
 
         System.out.println("This order will be available for pickup " +
