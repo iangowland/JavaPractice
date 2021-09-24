@@ -32,7 +32,9 @@ public class SqrtOverTen
             counter++;
 
             // For the final condition that must evaluate a number of square root
-            // operations to less than 1.01, we must assign the stored square root operation.
+            // operations to less than 1.01, we must assign the stored square root operation
+            // back into the variable that keeps storing the output, in this case it is
+            // called squareRootNum.
         
             while (squareRootNum >= 1.01)
             {
